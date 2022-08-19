@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4 class="text-center my-3 pb-3">To Do App</h4>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Update</th>
+            <th scope="col">View</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="table-light">
+            {% for word in customuser.item_set.all %}
+                <tr>
+                    <td>{{word.title}}</td>
+                    <td><a class="btn btn-outline-secondary" href="{% url 'item_update' word.pk %}" role="button">Update</a></td>
+                    <td><a class="btn btn-outline-info" href="{% url 'item_detail' word.pk %}" role="button">View</a></td>
+                    <td><a class="btn btn-outline-warning" href="{% url 'item_delete' word.pk %}" role="button">Finsished</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+{% endblock content %}

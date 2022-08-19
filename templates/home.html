@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card text-white bg-dark mb-3" style="max-width: 40rem; border-radius: 15px; padding: 0">
+    <div class="card-header"><h3>Welcome!</h3></div>
+    <div class="card-body">
+        <h5 class="card-title">My To Do List Website</h5>
+        <p class="card-text">This is Richard's demo "To Do List Website".</p>
+        <a class="btn btn-outline-light" href="{% url 'item_new' %}" role="button">Create Your First Task</a>
+    </div>
+  </div>
+{% endblock content %}

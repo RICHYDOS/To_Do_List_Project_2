@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3 class="text-center my-3 pb-3">DONE!</h3>
+    <a class="text-center my-3 pb-3" href="{% url 'task' user.pk %}" role="button">Back Home</a>
+{% endblock content %}

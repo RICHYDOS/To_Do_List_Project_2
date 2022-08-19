@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem; border-radius: 15px; padding: 0">
+        <div class="card-header"><h4>Task</h4></div>
+        <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center">
+        <a class="btn btn-outline-dark" style="margin-right: 50px" href="{% url 'item_update' item.pk %}" role="button">Edit</a>
+        <a class="btn btn-outline-dark" href="{% url 'task' user.pk %}" role="button">Home</a>
+    </div>
+{% endblock content %}
