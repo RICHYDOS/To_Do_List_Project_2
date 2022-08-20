@@ -1,3 +1,4 @@
+#The database tables for tasks are created here
 from distutils.sysconfig import customize_compiler
 from email.quoprimime import body_check
 import imp

@@ -1,10 +1,11 @@
+#This is for the basic functionality of a To Do List: Add, Delete, Edit, etc
+
 from django.shortcuts import render
 from django.views.generic import DetailView, TemplateView, DeleteView, UpdateView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from accounts.models import CustomUser
 from django.urls import reverse_lazy
 from .models import Item
-
 
 class UserItemView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = CustomUser
